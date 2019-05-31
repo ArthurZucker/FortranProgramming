@@ -58,3 +58,9 @@ clean:
 
 .f08.o:
 	$(GFOR) $(GFOROPT) $(INCL) -c -o $@ `test -f '$<' || echo '$(SRCDIR)/'`$<
+
+install:
+	apt-get install gnuplot || brew install gnuplot
+
+uninstall:
+	apt-get uninstall gnuplot || brew uninstall gnuplot
