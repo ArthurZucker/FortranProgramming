@@ -1,0 +1,32 @@
+program listerhamming
+
+  implicit none
+
+  integer::N
+  call system("clear")
+  write(*,fmt="('. Bienvenue dans Lister Hamming')")
+  write(*,fmt="(3X,'. Veuillez indiquer votre entier limite : ')",advance = 'no')
+  read *,N
+  write(*,fmt="('. [La liste]')")
+  if (.NOT. est_hamming(P)) then
+     write(*,fmt="(3X,'[Est hamming ?] : NON')")
+  else
+     write(*,fmt="(3X,'[Est hamming ?] : OUI')")
+  end if 
+
+
+  stop "Fin hamming..."
+  
+contains
+  function est_hamming(P)
+    logical::est_hamming
+    integer,intent(in)::P
+    integer :: i
+    if (mod(P,2)==0 .AND. mod(P,3)==0 .AND. mod(P,5)==0 ) then
+       est_hamming = .true.
+    else
+       est_hamming = .false.
+    end if
+    return 
+  end function est_hamming
+end program listerhamming

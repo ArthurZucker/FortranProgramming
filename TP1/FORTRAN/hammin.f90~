@@ -1,0 +1,31 @@
+program hamming
+
+  implicit none
+
+  integer::P
+  call system("clear")
+  write(*,fmt="('. Bienvenue dans est Hamming')")
+  write(*,fmt="(3X,'. Veuillez indiquer votre entrée : ')",advance = 'no')
+  read *,P
+  if (.NOT. est_hamming(P)) then
+     write(*,fmt="(3X,'[Est hamming ?] : NON')")
+  else
+     write(*,fmt="(3X,'[Est hamming ?] : OUI')")
+  end if 
+
+
+  stop "Fin hamming..."
+  
+contains
+  function est_hamming(P)
+    logical::est_hamming
+    integer,intent(in)::P
+    integer :: i
+    if (mod(P,2)==0 .AND. mod(P,3)==0 .AND. mod(P,5)==0 ) then
+       est_hamming = .true.
+    else
+       est_hamming = .false.
+    end if
+    return 
+  end function est_premier
+end program Primes

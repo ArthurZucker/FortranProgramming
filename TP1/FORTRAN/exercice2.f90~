@@ -1,0 +1,12 @@
+ program
+
+ implicit none
+
+ integer::P
+ logical::est_premier
+ call systeme("clear")
+ write(*,"(,'. Bienvenue dans est premier',)")
+
+ 
+ stop "Fin primes..."
+ end program 

@@ -1,0 +1,8 @@
+program matrice
+  implicit none
+  integer, dimension(:,:),allocatable :: Matrice
+  integer :: nblin, nbcol
+  
+
+
+end program matrice

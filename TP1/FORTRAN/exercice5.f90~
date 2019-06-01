@@ -1,0 +1,18 @@
+program suite
+  implicit none
+  integer:: i, n
+  real :: u0,u1  ,un
+
+  write (*,fmt = "('Veuillez indiquer le rang N')", advance = 'no')
+  read *,n
+  do i=1,n,1
+     write(*, fmt = "(3X,'iteration',X,i3,':',2X,i3)")i,un
+
+  end do 
+
+
+
+
+  
+stop "fin suite"
+end program suite
